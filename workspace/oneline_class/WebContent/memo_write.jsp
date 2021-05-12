@@ -29,8 +29,7 @@
 	pstmt.close();
 	con.close();
 	
-	out.println("데이터 추가 성공");
-	response.sendRedirect("/memo_list.jsp");       
+	out.println("데이터 추가 성공");     
 
 %>
 
