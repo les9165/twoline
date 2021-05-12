@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
+<%	
 	request.setCharacterEncoding("UTF-8");
 	String memo = request.getParameter("memo");
 	
@@ -23,14 +23,17 @@
 	Class.forName("com.mysql.cj.jdbc.Driver");	
 	con = DriverManager.getConnection(url, user, passwd);
 	
-	
 	pstmt = con.prepareStatement(sql);
 	pstmt.setString(1, memo);
 	pstmt.executeUpdate();
 	pstmt.close();
 	con.close();
+	
 	out.println("데이터 추가 성공");
+	response.sendRedirect("/memo_list.jsp");       
+
 %>
+
 
 </body>
 </html>

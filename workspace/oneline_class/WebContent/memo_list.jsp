@@ -37,5 +37,9 @@
 	out.println("DB조회 성공");
 %>
 
+<form method="post" action="memo_form.html">
+<input type="submit" value="작성">
+</form>
+
 </body>
 </html>
